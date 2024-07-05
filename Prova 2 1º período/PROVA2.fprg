@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ollce"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-04 07:59:29 "/>
+        <attribute name="created" value="b2xsY2U7Q8OJU0FSOzIwMjQtMDctMDQ7IjA3OjM4OjU3ICI7MjIyOQ=="/>
+        <attribute name="edited" value="b2xsY2U7Q8OJU0FSOzIwMjQtMDctMDQ7IjA3OjU5OjI5ICI7MTsyMzM5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qtdSim, qtdNao, qtdMulheresSim, qtdHomensNao, totalEntrevistados" type="Integer" array="False" size=""/>
+            <declare name="percMulheresSim, percHomensNao" type="Real" array="False" size=""/>
+            <output expression="&quot;Informe o n&#250;mero total de entrevistados:&quot;" newline="True"/>
+            <input variable="totalEntrevistados"/>
+            <output expression="&quot;Informe a quantidade de pessoas que responderam 'sim':&quot;" newline="True"/>
+            <input variable="qtdSim"/>
+            <output expression="&quot;Informe a quantidade de pessoas que responderam 'n&#227;o':&quot;" newline="True"/>
+            <input variable="qtdNao"/>
+            <output expression="&quot;Informe a quantidade de mulheres que responderam 'sim':&quot;" newline="True"/>
+            <input variable="qtdMulheresSim"/>
+            <output expression="&quot;Informe a quantidade de homens que responderam 'n&#227;o':&quot;" newline="True"/>
+            <input variable="qtdHomensNao"/>
+            <assign variable="percMulheresSim" expression="(qtdMulheresSim / totalEntrevistados) * 100"/>
+            <assign variable="percHomensNao" expression="(qtdHomensNao / totalEntrevistados) * 100"/>
+            <output expression="&quot;N&#250;mero de pessoas que responderam sim:&quot; &amp; qtdSim" newline="True"/>
+            <output expression="&quot;N&#250;mero de pessoas que responderam 'n&#227;o':&quot;&amp; qtdNao" newline="True"/>
+            <output expression="&quot;Percentagem de mulheres que responderam 'sim':&quot;&amp; percMulheresSim &amp; &quot;%&quot;" newline="True"/>
+            <output expression="&quot;Percentagem de homens que responderam 'n&#227;o':&quot; &amp;  percHomensNao &amp; &quot;%&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
