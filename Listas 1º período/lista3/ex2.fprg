@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value="Series Calculation"/>
+        <attribute name="authors" value=""/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-11 09:00:00 "/>
+        <attribute name="created" value="b2xsY2U7Q8OJU0FSOzIwMjQtMDctMTE7IjA4OjU5OjE1ICI7MjIyNQ=="/>
+        <attribute name="edited" value="b2xsY2U7Q8OJU0FSOzIwMjQtMDctMTE7IjA5OjAwOjAwICI7MjsyMzE1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, f, termo, anterior, diferenca" type="Real" array="False" size=""/>
+            <declare name="n, fatorial, denominador" type="Integer" array="False" size=""/>
+            <assign variable="f" expression="0"/>
+            <assign variable="n" expression="0"/>
+            <assign variable="fatorial" expression="1"/>
+            <assign variable="denominador" expression="2"/>
+            <output expression="&quot;Digite o valor de x: &quot;" newline="True"/>
+            <input variable="x"/>
+            <assign variable="termo" expression="(5 * x) / denominador"/>
+            <assign variable="anterior" expression="0"/>
+            <assign variable="diferenca" expression="abs(termo - anterior)"/>
+            <while expression="diferenca &gt;= 0.00000001">
+                <assign variable="f" expression="f + termo"/>
+                <assign variable="n" expression="n + 1"/>
+                <assign variable="fatorial" expression="fatorial * (n + 1)"/>
+                <assign variable="denominador" expression="denominador * (n + 2)"/>
+                <assign variable="termo" expression="(5 + 6 * n) * (x ^ (n + 1)) / denominador"/>
+                <assign variable="diferenca" expression="abs(termo - anterior)"/>
+                <assign variable="anterior" expression="termo"/>
+            </while>
+            <output expression="&quot;f(x) = &quot; &amp; f" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

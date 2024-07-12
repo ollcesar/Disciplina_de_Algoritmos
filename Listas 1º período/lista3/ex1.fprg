@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ollce"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-11 08:09:45 "/>
+        <attribute name="created" value="b2xsY2U7Q8OJU0FSOzIwMjQtMDctMTE7IjA3OjM2OjE5ICI7MjIyMw=="/>
+        <attribute name="edited" value="b2xsY2U7Q8OJU0FSOzIwMjQtMDctMTE7IjA4OjA5OjQ1ICI7MjsyMzMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valor, soma, max, min, media, amplitude" type="Real" array="False" size=""/>
+            <declare name="cont" type="Integer" array="False" size=""/>
+            <assign variable="soma" expression="0"/>
+            <assign variable="cont" expression="0"/>
+            <assign variable="max" expression="-9999999"/>
+            <assign variable="min" expression="9999999"/>
+            <output expression="&quot;Digite o valor inicial: &quot;" newline="True"/>
+            <input variable="valor"/>
+            <while expression="valor &lt;&gt; 0">
+                <assign variable="soma" expression="soma + valor"/>
+                <assign variable="cont" expression="cont + 1"/>
+                <if expression="valor &gt; max">
+                    <then>
+                        <assign variable="max" expression="valor"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="valor &lt; min">
+                    <then>
+                        <assign variable="min" expression="valor"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;Digite o proximo valor&quot;" newline="True"/>
+                <input variable="valor"/>
+            </while>
+            <if expression="cont &gt; 0">
+                <then>
+                    <assign variable="media" expression="soma / cont"/>
+                    <assign variable="amplitude" expression="max - min"/>
+                    <output expression="&quot;Amplitude = &quot; &amp; amplitude" newline="True"/>
+                    <output expression="&quot;M&#233;dia = &quot; &amp; media" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Nenhum valor positivo foi informado.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
